@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.loaderContainer {
+  height: 100vh;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+}
+
+.singerName {
+  &:global(.MuiTypography-root) {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-normal-600);
+    background-color: var(--BLUE_CERULEAN);
+    color: var(--WHITE);
+    margin: 20px 0;
+    padding: 0 10px;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 480px) {
+    &:global(.MuiTypography-root) {
+      font-size: var(--font-size-xxl);
+    }
+  }
+}
+
+.errorMessage {
+  &:global(.MuiTypography-root) {
+    color: var(--ERROR);
+    background-color: var(--GREY_10);
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: var(--font-size-xxl)
+  }
+}

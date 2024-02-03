@@ -9,8 +9,16 @@ module.exports = function override(config) {
       components: path.resolve(__dirname, 'src/components'),
       pages: path.resolve(__dirname, 'src/pages'),
       theme: path.resolve(__dirname, 'src/theme'),
-      interfaces: path.resolve(__dirname, 'src/interfaces'),
-    },
+      store: path.resolve(__dirname, 'src/store'),
+      services: path.resolve(__dirname, 'src/services'),
+      hooks: path.resolve(__dirname, 'src/hooks'),
+      hoc: path.resolve(__dirname, 'src/hoc'),
+      assets: path.resolve(__dirname, 'src/assets'),
+      constants: path.resolve(__dirname, 'src/constants'),
+      routes: path.resolve(__dirname, 'src/routes'),
+      containers: path.resolve(__dirname, 'src/containers'),
+      interfaces: path.resolve(__dirname, 'src/interfaces')
+    }
   };
 
   return config;

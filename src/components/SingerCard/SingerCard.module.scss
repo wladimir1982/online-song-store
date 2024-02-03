@@ -1,0 +1,33 @@
+@import 'src/theme/variables';
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--INFO);
+  color: var(--WHITE);
+  padding: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s ease;
+
+  &:hover {
+    background-color: var(--BLUE);
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.singerName {
+  &:global(.MuiTypography-root) {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-normal-600);
+  }
+}
+
+.songsCount {
+  &:global(.MuiTypography-root) {
+    font-size: var(--font-size-l);
+  }
+}

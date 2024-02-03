@@ -6,6 +6,14 @@
       "components/*": ["./src/components/*"],
       "pages/*": ["./src/pages/*"],
       "theme/*": ["./src/theme/*"],
+      "store/*": ["./src/store/*"],
+      "services/*": ["./src/services/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "hoc/*": ["./src/hoc/*"],
+      "assets/*": ["./src/assets/*"],
+      "constants/*": ["./src/constants/*"],
+      "routes/*": ["./src/routes/*"],
+      "containers/*": ["./src/containers/*"],
       "interfaces/*": ["./src/interfaces/*"]
     }
   }

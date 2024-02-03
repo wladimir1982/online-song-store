@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoMessage {
+  &:global(.MuiTypography-root) {
+    max-width: 500px;
+    color: var(--WHITE);
+    background-color: var(--GREY_10);
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: var(--font-size-xxl)
+  }
+}
