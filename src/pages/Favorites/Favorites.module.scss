@@ -1,7 +1,10 @@
 .container {
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 15px;
 }
 
 .infoMessage {

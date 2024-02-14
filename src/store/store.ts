@@ -3,7 +3,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { singerApi } from 'services/SingerService';
 import { singersApi } from 'services/SingersService';
 
-import favoritesReducer from './reducers/Favorites';
+import { favoritesReducer } from './reducers/Favorites';
 
 const rootReducer = combineReducers({
   favoritesReducer,

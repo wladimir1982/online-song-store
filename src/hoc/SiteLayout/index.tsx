@@ -51,7 +51,13 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) => {
       return <Box className={styles.img} component="img" src={logo} alt="logo" />;
     } else {
       return (
-        <Button variant="contained" color="info" startIcon={<ArrowBack />} onClick={goBack}>
+        <Button
+          variant="contained"
+          color="info"
+          sx={{ color: theme => theme.palette.common.white }}
+          startIcon={<ArrowBack />}
+          onClick={goBack}
+        >
           Back
         </Button>
       );
@@ -80,7 +86,7 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) => {
         </Typography>
         {renderFavoriteIcon()}
       </Box>
-      <Box component="main">
+      <Box component="main" className={styles.main}>
         <Box className={styles.container}>{children}</Box>
       </Box>
     </>

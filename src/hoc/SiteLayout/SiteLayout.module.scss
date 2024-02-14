@@ -88,14 +88,14 @@
   font-size: var(--font-size-xs);
 }
 
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px 30px;
+.main {
   background-image: url('../../assets/images/night-car-music-1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.container {
+  min-height: 100vh;
+  height: 100%;
 }

@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { favorites } from 'store/reducers/Favorites';
+import React, { FC, useState } from 'react';
+import { addSongToFavorite, removeSongFromFavorite } from 'store/reducers/Favorites';
 
 import { useAppDispatch, useAppSelector } from 'hooks/redux';
 import { ISong } from 'interfaces/interfaces';
@@ -19,10 +19,9 @@ const SongsTable: FC<SingerCardProps> = ({
   isFavoritePage = false,
   toggleInfoFavoriteModal
 }) => {
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [page, setPage] = useState<number>(0);
+  const [rowsPerPage, setRowsPerPage] = useState<number>(5);
   const { songs: favoriteSongs } = useAppSelector(state => state.favoritesReducer);
-  const { addSongToFavorite, removeSongFromFavorite } = favorites.actions;
   const dispatch = useAppDispatch();
   const { enqueueSnackbar } = useSnackbar();
   const listOfSongs: ISong[] = isFavoritePage ? favoriteSongs : songs;
@@ -121,7 +120,13 @@ const SongsTable: FC<SingerCardProps> = ({
                   sx={{
                     fontSize: '0.875rem',
                     cursor: isFavoritePage ? 'pointer' : 'inherit',
-                    textDecoration: isFavoritePage ? 'underline' : 'none'
+                    textDecoration: isFavoritePage ? 'underline' : 'none',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    wordBreak: 'break-all'
                   }}
                   onClick={() => handleToggleInfoFavoriteModal(row)}
                 >
