@@ -1,0 +1,30 @@
+@import 'src/theme/variables';
+
+.container {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.loaderContainer {
+  height: 100vh;
+}
+
+.errorMessage {
+  &:global(.MuiTypography-root) {
+    color: var(--ERROR);
+    background-color: var(--GREY_10);
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: var(--font-size-xxl)
+  }
+}
